@@ -1,0 +1,86 @@
+export const planetsData = [
+  {
+    id: 1,
+    name: 'Mercury',
+    image: '/static/images/mercury.jpg',
+    moons: 0,
+  },
+  {
+    id: 2,
+    name: 'Venus',
+    image: '/static/images/venus.webp',
+    moons: 0,
+  },
+  {
+    id: 3,
+    name: 'Earth',
+    image: '/static/images/earth.jpg',
+    moons: 1,
+  },
+  {
+    id: 4,
+    name: 'Mars',
+    image: '/static/images/mars.jpg',
+    moons: 2,
+  },
+  {
+    id: 5,
+    name: 'Jupiter',
+    image: '/static/images/jupiter.png',
+    moons: 79,
+  },
+  {
+    id: 6,
+    name: 'Saturn',
+    image: '/static/images/saturn.jpg',
+    moons: 82,
+  },
+  {
+    id: 7,
+    name: 'Uranus',
+    image: '/static/images/uranus.jpg',
+    moons: 27,
+  },
+  {
+    id: 8,
+    name: 'Neptune',
+    image: '/static/images/neptune.webp',
+    moons: 14,
+  },
+  {
+    id: 9,
+    name: 'Kepler-186f',
+    image: '/static/images/Science_1-kepler186f-(1).webp',
+    moons: 3,
+  },
+  {
+    id: 10,
+    name: 'Nyx Prime',
+    image: '/static/images/exoplanets-could-be-hi.jpg',
+    moons: 7,
+  },
+  {
+    id: 11,
+    name: 'Aetheris',
+    image: '/static/images/exoplanets1.webp',
+    moons: 12,
+  },
+  {
+    id: 12,
+    name: 'Caelum',
+    image: '/static/images/gas-dwarf-exoplanet.webp',
+    moons: 5,
+  },
+  {
+    id: 13,
+    name: 'Nova Centauri',
+    image: '/static/images/file-20230413-14-kps5s1.avif',
+    moons: 9,
+  },
+  {
+    id: 14,
+    name: 'Y-Dwarf 1280',
+    image: '/static/images/Ydwarf1280.jpg',
+    moons: 1,
+  },
+]

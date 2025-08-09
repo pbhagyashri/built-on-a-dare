@@ -2,10 +2,8 @@
 import { useContext } from 'react'
 import { SelectedPlanetContext } from '@/app/contexts/SelectedPlanetContext'
 import {
-  Box,
   MenuItem,
   Autocomplete as MuiAutocomplete,
-  Stack,
   TextField,
 } from '@mui/material'
 
@@ -13,7 +11,8 @@ interface AutocompleteProps<T extends { id: number }> {
   children: (option: T) => React.ReactNode
   options: T[]
   getOptionLabel: (option: T) => string
-  label: string
+  label?: string
+  placeholder?: string
   onInputChange?: (
     event: React.SyntheticEvent,
     value: string,
@@ -30,6 +29,7 @@ export const Autocomplete = <T,>({
   options,
   getOptionLabel,
   label,
+  placeholder,
   onInputChange,
   onChange,
 }: AutocompleteProps<T & { id: number }>) => {
@@ -69,24 +69,29 @@ export const Autocomplete = <T,>({
   }
 
   return (
-    <Stack direction="row" justifyContent="center" mx="auto">
-      <MuiAutocomplete
-        options={options}
-        getOptionLabel={getOptionLabel}
-        onInputChange={handleInputChange}
-        onChange={handleChange}
-        renderInput={(params) => <TextField {...params} label={label} />}
-        renderOption={(props, option) => {
-          return (
-            <MenuItem {...props} key={option.id}>
-              {children(option)}
-            </MenuItem>
-          )
-        }}
-        sx={{
-          width: { xs: '100%', md: '70%' },
-        }}
-      />
-    </Stack>
+    <MuiAutocomplete
+      options={options}
+      getOptionLabel={getOptionLabel}
+      onInputChange={handleInputChange}
+      onChange={handleChange}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          label={label}
+          placeholder={placeholder}
+          sx={{ borderRadius: '50px' }}
+        />
+      )}
+      renderOption={(props, option) => {
+        return (
+          <MenuItem {...props} key={option.id}>
+            {children(option)}
+          </MenuItem>
+        )
+      }}
+      sx={{
+        width: { xs: '100%', md: '50%' },
+      }}
+    />
   )
 }

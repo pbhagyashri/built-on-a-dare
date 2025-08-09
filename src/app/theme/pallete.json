@@ -1,7 +1,19 @@
 {
-  "primary": "#748873",
-  "primaryDark": "#2C3930",
-  "secondary": "#A27B5C",
+  "orvilleBlue": "#2E5BBA",
+  "orvilleBlueDarker": "#111c36",
+  "deepSpaceNavy": "#0B1426",
+  "brightAccentBlue": "#1e74d0",
+  "orvilleGold": "#A27B5C",
   "white": "#ffffff",
-  "baige": "#E5E0D8"
+  "softGrey": "#F5F7FA",
+  "softBlue": "#8B9DC3",
+  "warmAmber": "#FFB800",
+  "warmAmberDarker": "#ffc300",
+  "purple": "#6C5CE7",
+  "krillGreen": "#4d7440",
+  "spaceShuttleBlue": "#2d698d",
+  "orvilleGray": "#1e2637",
+  "orvilleRed": "#5a0d13",
+  "typography": "#8b9dc3",
+  "typographyPurple": "#2e5bba"
 }

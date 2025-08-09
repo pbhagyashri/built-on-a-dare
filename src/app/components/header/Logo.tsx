@@ -1,25 +1,20 @@
-import { Typography, styled } from '@mui/material'
-import AdbIcon from '@mui/icons-material/Adb'
-
-const StyledLogo = styled(Typography)`
-  color: ${({ theme }) => theme.palette.white};
-  white-space: nowrap;
-`
+import { Typography, Stack } from '@mui/material'
 
 export const Logo = () => {
   return (
-    <>
-      <AdbIcon />
-      <StyledLogo variant="h4">Built</StyledLogo>
-      <StyledLogo variant="h4" sx={{ color: 'primary.dark' }}>
-        On
-      </StyledLogo>
-      <StyledLogo variant="h4" sx={{ fontWeight: 'bold' }}>
+    <Stack direction="row" alignItems="baseline">
+      <Typography variant="h4">Built</Typography>
+      <Typography variant="h4">On</Typography>
+      <Typography
+        variant="h4"
+        sx={{
+          transform: 'skew(-7deg)',
+          color: 'primary.light',
+        }}
+      >
         A
-      </StyledLogo>
-      <StyledLogo variant="h4" sx={{ fontWeight: 'bold' }}>
-        Dare
-      </StyledLogo>
-    </>
+      </Typography>
+      <Typography variant="h4">Dare</Typography>
+    </Stack>
   )
 }

@@ -13,6 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         elevation={2}
         sx={{
           minHeight: '100vh',
+          backgroundColor: 'primary.dark',
         }}
       >
         <Header />

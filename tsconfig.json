@@ -26,6 +26,12 @@
       "@/utils/*": ["./src/app/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/crewAutocomplete"
+  ],
   "exclude": ["node_modules"]
 }

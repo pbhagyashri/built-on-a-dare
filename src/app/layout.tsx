@@ -5,7 +5,6 @@ import { Roboto } from 'next/font/google'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme/theme'
 import { Typography } from '@mui/material'
-import { SelectedPlanetProvider } from './contexts/SelectedPlanetContext'
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -36,18 +35,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.variable}>
-      <SelectedPlanetProvider>
-        <AppRouterCacheProvider options={{ key: 'css' }}>
-          <ThemeProvider theme={theme}>
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
-              <main>{children}</main>
-              <footer>
-                <Typography variant="body1">Footer</Typography>
-              </footer>
-            </body>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
-      </SelectedPlanetProvider>
+      <AppRouterCacheProvider options={{ key: 'css' }}>
+        <ThemeProvider theme={theme}>
+          <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <main>{children}</main>
+            <footer>
+              <Typography variant="body1">Footer</Typography>
+            </footer>
+          </body>
+        </ThemeProvider>
+      </AppRouterCacheProvider>
     </html>
   )
 }

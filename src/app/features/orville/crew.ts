@@ -1,14 +1,4 @@
-export type OrvilleCast = {
-  id: number
-  name: string
-  avatar: string
-  role: string
-  actor: string
-  bio: string
-  rank: string
-  department: string
-  species: string
-}
+import { OrvilleCast } from '@/types/types'
 
 export const crew: OrvilleCast[] = [
   {
@@ -17,10 +7,16 @@ export const crew: OrvilleCast[] = [
     avatar: 'KG',
     role: 'First Officer',
     actor: 'Adrianne Palicki',
-    bio: 'Kelly Grayson is the First Officer of the Orville. She is a skilled pilot and engineer, and is known for her quick thinking and leadership skills.',
+    bio: 'Kelly Grayson is the First Officer of the Orville. She is a great leader, and is known for her diplomacy and leadership skills. She is a human from planet earth. She lives aboard the Orville.',
     rank: 'Commander',
     department: 'Command',
     species: 'Human',
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 2,
@@ -28,10 +24,16 @@ export const crew: OrvilleCast[] = [
     avatar: 'CF',
     role: 'Chief Medical Officer',
     actor: 'Penny Johnson Jerald',
-    bio: 'Dr. Claire Finn is the Chief Medical Officer of the Orville. She is a skilled doctor and scientist, and is known for her quick thinking and leadership skills.',
+    bio: 'Dr. Claire Finn is the Chief Medical Officer of the Orville. She is a skilled doctor and scientist, and is known for her quick thinking and leadership skills. She is a human from planet earth. She lives aboard the Orville with her 2 son.',
     rank: 'Doctor',
     department: 'Medical',
     species: 'Human',
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 3,
@@ -39,10 +41,21 @@ export const crew: OrvilleCast[] = [
     avatar: 'BH',
     role: 'Second Officer',
     actor: 'Peter Macon',
-    bio: 'Bortus is a Lt. Commander of the Orville. He is a skilled pilot and engineer, and is known for his quick thinking and leadership skills.',
+    bio: 'Bortus is a Lt. Commander of the Orville. He is a skilled security officer and leader. He is a moclan from planet moclan. He lives aboard the Orville.',
     rank: 'Commander',
     department: 'Security',
     species: 'Moclan',
+    funFacts: [
+      'Eats a cactus plant in one bite.',
+      'A great singer.',
+      'He is a softy on the inside.',
+    ],
+    homeworld: {
+      name: 'Moclus',
+      image: '/static/images/exoplanets-could-be-hi.jpg',
+      description:
+        'Moclan is a planet in the Orville universe. It is a planet that is home to the Moclan people. They are a race of people that are known for their great leaders and their great warriors.',
+    },
   },
   {
     id: 4,
@@ -54,6 +67,17 @@ export const crew: OrvilleCast[] = [
     rank: 'Lieutenant',
     department: 'Science',
     species: 'Human',
+    funFacts: [
+      'Best pilot in the fleet.',
+      'Great singer.',
+      'Great sense of humor.',
+    ],
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 6,
@@ -65,6 +89,12 @@ export const crew: OrvilleCast[] = [
     rank: 'Captain',
     department: 'Command',
     species: 'Human',
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 7,
@@ -76,6 +106,13 @@ export const crew: OrvilleCast[] = [
     bio: 'Alara Kitan is a Lieutenant and Chief of Security of the Orville. She is a skilled pilot and engineer, and is known for her quick thinking and leadership skills.',
     department: 'Security',
     species: 'Xelayan',
+    funFacts: ['Known for her strength.', 'Great fighter'],
+    homeworld: {
+      name: 'Zaralon',
+      image: '/static/images/Science_1-kepler186f-(1).webp',
+      description:
+        "Zaralon is a mountainous planet with a thin, icy atmosphere and glowing blue rivers that wind through crystalline valleys. Its gravity is slightly higher than Earth's, and its native flora is known for its bioluminescent properties, lighting up the night in vibrant colors.",
+    },
   },
   {
     id: 8,
@@ -87,6 +124,17 @@ export const crew: OrvilleCast[] = [
     rank: 'Commander',
     department: 'Engineering',
     species: 'Human',
+    funFacts: [
+      'Has highest IQ in the fleet.',
+      'Great engineer.',
+      'Great leader.',
+    ],
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 9,
@@ -98,6 +146,12 @@ export const crew: OrvilleCast[] = [
     rank: 'Commander',
     department: 'Security',
     species: 'Human',
+    homeworld: {
+      name: 'Virellia',
+      image: '/static/images/virellia.jpg',
+      description:
+        'Virellia is a lush, temperate planet known for its sprawling emerald forests and floating mountain ranges. Its atmosphere is rich in oxygen and faintly glows green at dusk. The native Virellians are renowned for their advanced botanical sciences and harmonious relationship with the planet’s unique wildlife.',
+    },
   },
   {
     id: 10,
@@ -109,6 +163,12 @@ export const crew: OrvilleCast[] = [
     rank: 'Ensign',
     department: 'Engineering',
     species: 'Human',
+    homeworld: {
+      name: 'Earth',
+      image: '/static/images/earth.jpg',
+      description:
+        'Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth’s gravity interacts with other objects in space, especially the Sun and the Moon, Earth’s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as a year. During this time, Earth rotates about its axis about 366.26 times.',
+    },
   },
   {
     id: 11,
@@ -120,5 +180,11 @@ export const crew: OrvilleCast[] = [
     species: 'Human',
     avatar: 'YT',
     bio: 'Yaphit is a Lieutenant of the Orville. He is a skilled pilot and engineer, and is known for his quick thinking and leadership skills.',
+    homeworld: {
+      name: 'Zyphora',
+      image: '/static/images/zyphora.jpg',
+      description:
+        'Zyphora is a mysterious planet located in the outer rim of the Kaylon sector. Known for its swirling violet storms and floating crystal forests, Zyphora is home to a variety of rare minerals and unique lifeforms. Its atmosphere shimmers with bioluminescent clouds, making its nights as bright as its days.',
+    },
   },
 ]

@@ -8,10 +8,9 @@ import {
   styled,
   Grid,
 } from '@mui/material'
-import { CrewCard } from '@/app/features/orville/crewCard'
+import { CrewCard } from './CrewCard'
 import { crew } from './crew'
 import { debouncer } from '@/utils/debouncer'
-import { Tag } from '@/app/components/tag'
 import { FilterTag } from './FilterTag'
 
 const StyledTextField = styled(TextField)`
@@ -130,7 +129,7 @@ export const Orville = () => {
       <Grid container spacing={3} mt={6}>
         {filteredCrew.map((crew) => (
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={crew.id}>
-            <CrewCard {...crew} />
+            <CrewCard crew={crew} />
           </Grid>
         ))}
       </Grid>

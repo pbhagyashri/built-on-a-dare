@@ -1,7 +1,6 @@
 export type OrvilleCast = {
   id: number
-  firstName: string
-  lastName: string
+  name: string
   avatar: string
   role: string
   actor: string
@@ -9,6 +8,12 @@ export type OrvilleCast = {
   rank: string
   department: string
   species: string
+  funFacts?: string[]
+  homeworld: {
+    name: string
+    image: string
+    description: string
+  }
 }
 
 export enum ColorMap {

@@ -9,9 +9,9 @@ import {
   Stack,
 } from '@mui/material'
 import { Tag } from '@/components/tag'
-import { CrewModal } from './CrewModal'
 import { OrvilleCast } from '@/types'
 import { useState } from 'react'
+import CrewDialog from './CrewDialog'
 
 const StyledCard = styled(Card)`
   background-color: ${({ theme }) => theme.palette.orvilleGray};
@@ -34,7 +34,9 @@ export const CrewCard = ({ crew }: CrewCardProps) => {
   const { name, role, rank, department, species, avatar, actor } = crew
   return (
     <>
-      <CrewModal crew={crew} open={open} onClose={() => setOpen(false)} />
+      {open && (
+        <CrewDialog crew={crew} open={open} onClose={() => setOpen(false)} />
+      )}
       <StyledCard onClick={() => setOpen(true)}>
         <CardHeader
           action={<Tag label={rank} variant="rank" />}

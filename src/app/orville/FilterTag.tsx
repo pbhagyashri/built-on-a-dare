@@ -23,7 +23,7 @@ export const FilterTag = ({ label, onClick }: FilterTagProps) => {
         '&:hover': {
           backgroundColor: alpha(theme.palette.spaceShuttleBlue, 0.6),
           color: 'white',
-          transform: 'scale(1.05)',
+          transform: 'scale(1.2)',
           transition: 'transform 0.3s ease',
         },
       }}

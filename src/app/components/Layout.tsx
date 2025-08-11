@@ -1,5 +1,6 @@
-import { Box, Container, Paper, Stack } from '@mui/material'
+import { Box, Container, Paper } from '@mui/material'
 import { Header } from './header'
+import '../globals.css'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

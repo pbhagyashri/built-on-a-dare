@@ -5,31 +5,20 @@ import {
   Typography,
   useTheme,
   TextField,
-  styled,
   Grid,
+  Box,
 } from '@mui/material'
 import { CrewCard } from './CrewCard'
 import { crew } from './crew'
 import { debouncer } from '@/utils/debouncer'
 import { FilterTag } from './FilterTag'
-
-const StyledTextField = styled(TextField)`
-  border: 2px solid;
-  border-color: ${({ theme }) => theme.palette.spaceShuttleBlue};
-  border-radius: 50px;
-  width: 100%;
-  max-width: 650px;
-  &:hover {
-    border-color: ${({ theme }) => theme.palette.spaceShuttleBlue};
-  }
-  &:focus-within {
-    border-color: ${({ theme }) => theme.palette.primary.light};
-    box-shadow: 0 0 20px ${({ theme }) => theme.palette.spaceShuttleBlue};
-  }
-`
+import { useTextFieldStyles } from './helpers/useTextFieldStyles'
+import AIChat from './AIChat'
+import { useAskAi } from '../hooks/useAskAi'
 
 export const Orville = () => {
   const theme = useTheme()
+  const textFieldStyles = useTextFieldStyles()
   const [search, setSearch] = useState('')
   const [filteredCrew, setFilteredCrew] = useState(crew)
 
@@ -71,7 +60,8 @@ export const Orville = () => {
         <Typography variant="h4" color="typographyColors.main" mb={5}>
           Crew Database • Planetary Union Fleet
         </Typography>
-        <StyledTextField
+        <TextField
+          sx={textFieldStyles}
           placeholder="Search crew members..."
           value={search}
           onChange={handleFilterCrew}
@@ -133,6 +123,14 @@ export const Orville = () => {
           </Grid>
         ))}
       </Grid>
+      <Box mb={8} mt={8} minHeight="100vh">
+        <Stack direction="column" alignItems="center">
+          <Typography variant="h2" color="typographyColors.main" mb={2}>
+            Ask the AI
+          </Typography>
+        </Stack>
+        <AIChat />
+      </Box>
     </>
   )
 }

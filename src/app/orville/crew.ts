@@ -146,9 +146,14 @@ export const crew: OrvilleCast[] = [
     rank: 'Commander',
     department: 'Security',
     species: 'Human',
+    funFacts: [
+      'Has a pet cat named "Tally".',
+      'Loves to cook.',
+      'Great at fixing things.',
+    ],
     homeworld: {
       name: 'Virellia',
-      image: '/static/images/virellia.jpg',
+      image: '/static/images/Science_1-kepler186f-(1).webp',
       description:
         'Virellia is a lush, temperate planet known for its sprawling emerald forests and floating mountain ranges. Its atmosphere is rich in oxygen and faintly glows green at dusk. The native Virellians are renowned for their advanced botanical sciences and harmonious relationship with the planet’s unique wildlife.',
     },
@@ -182,7 +187,7 @@ export const crew: OrvilleCast[] = [
     bio: 'Yaphit is a Lieutenant of the Orville. He is a skilled pilot and engineer, and is known for his quick thinking and leadership skills.',
     homeworld: {
       name: 'Zyphora',
-      image: '/static/images/zyphora.jpg',
+      image: '/static/images/exoplanets1.webp',
       description:
         'Zyphora is a mysterious planet located in the outer rim of the Kaylon sector. Known for its swirling violet storms and floating crystal forests, Zyphora is home to a variety of rare minerals and unique lifeforms. Its atmosphere shimmers with bioluminescent clouds, making its nights as bright as its days.',
     },

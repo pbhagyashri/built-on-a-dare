@@ -31,14 +31,6 @@ const StyledDialog = styled(Dialog)`
   border: 1px solid ${({ theme }) => theme.palette.primary.light};
   border-radius: 10px;
   box-shadow: 0 0 20px ${({ theme }) => theme.palette.spaceShuttleBlue};
-  & .MuiPaper-root {
-    background-color: ${({ theme }) => alpha(theme.palette.primary.dark, 0.95)};
-    border-radius: 10px;
-    padding: ${({ theme }) => theme.spacing(2)};
-    outline: 1px solid ${({ theme }) => theme.palette.primary.light};
-    box-shadow: 24;
-    transition: all 0.2s ease-in-out;
-  }
 `
 
 const CrewDialog = ({ crew, open, onClose }: CrewDialogProps) => {

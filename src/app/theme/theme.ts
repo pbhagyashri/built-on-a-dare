@@ -1,5 +1,5 @@
 'use client'
-import { createTheme } from '@mui/material/styles'
+import { alpha, createTheme } from '@mui/material/styles'
 import { Roboto } from 'next/font/google'
 import palette from './pallete.json'
 
@@ -192,6 +192,20 @@ const theme = createTheme({
             '& .MuiSvgIcon-root': {
               color: palette.spaceShuttleBlue,
             },
+          },
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        root: {
+          '& .MuiPaper-root': {
+            backgroundColor: alpha(palette.deepSpaceNavy, 0.95),
+            borderRadius: '10px',
+            padding: defaultTheme.spacing(2),
+            outline: `1px solid ${palette.brightAccentBlue}`,
+            boxShadow: '24',
+            transition: 'all 0.2s ease-in-out',
           },
         },
       },
